@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/heycard/static/css/main.cdff7d2d.chunk.css",
-    "main.js": "/heycard/static/js/main.fb710863.chunk.js",
-    "main.js.map": "/heycard/static/js/main.fb710863.chunk.js.map",
-    "runtime-main.js": "/heycard/static/js/runtime-main.9a3f8fc7.js",
-    "runtime-main.js.map": "/heycard/static/js/runtime-main.9a3f8fc7.js.map",
-    "static/js/2.9bc057e2.chunk.js": "/heycard/static/js/2.9bc057e2.chunk.js",
-    "static/js/2.9bc057e2.chunk.js.map": "/heycard/static/js/2.9bc057e2.chunk.js.map",
-    "index.html": "/heycard/index.html",
-    "static/css/main.cdff7d2d.chunk.css.map": "/heycard/static/css/main.cdff7d2d.chunk.css.map",
-    "static/js/2.9bc057e2.chunk.js.LICENSE.txt": "/heycard/static/js/2.9bc057e2.chunk.js.LICENSE.txt",
-    "static/media/Logo2.79b8a6fb.svg": "/heycard/static/media/Logo2.79b8a6fb.svg",
-    "static/media/App.css": "/heycard/static/media/Main.601cc72e.png"
+    "main.css": "/Heycard/static/css/main.d55fdf78.chunk.css",
+    "main.js": "/Heycard/static/js/main.fb710863.chunk.js",
+    "main.js.map": "/Heycard/static/js/main.fb710863.chunk.js.map",
+    "runtime-main.js": "/Heycard/static/js/runtime-main.bfa257b7.js",
+    "runtime-main.js.map": "/Heycard/static/js/runtime-main.bfa257b7.js.map",
+    "static/js/2.8257cd87.chunk.js": "/Heycard/static/js/2.8257cd87.chunk.js",
+    "static/js/2.8257cd87.chunk.js.map": "/Heycard/static/js/2.8257cd87.chunk.js.map",
+    "index.html": "/Heycard/index.html",
+    "static/css/main.d55fdf78.chunk.css.map": "/Heycard/static/css/main.d55fdf78.chunk.css.map",
+    "static/js/2.8257cd87.chunk.js.LICENSE.txt": "/Heycard/static/js/2.8257cd87.chunk.js.LICENSE.txt",
+    "static/media/Logo2.79b8a6fb.svg": "/Heycard/static/media/Logo2.79b8a6fb.svg",
+    "static/media/App.css": "/Heycard/static/media/Main.601cc72e.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.9a3f8fc7.js",
-    "static/js/2.9bc057e2.chunk.js",
-    "static/css/main.cdff7d2d.chunk.css",
+    "static/js/runtime-main.bfa257b7.js",
+    "static/js/2.8257cd87.chunk.js",
+    "static/css/main.d55fdf78.chunk.css",
     "static/js/main.fb710863.chunk.js"
   ]
 }
