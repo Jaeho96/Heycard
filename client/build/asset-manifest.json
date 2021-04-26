@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/makecard/static/css/main.e742c25f.chunk.css",
+    "main.js": "/makecard/static/js/main.9442c140.chunk.js",
+    "main.js.map": "/makecard/static/js/main.9442c140.chunk.js.map",
+    "runtime-main.js": "/makecard/static/js/runtime-main.18e3d2c6.js",
+    "runtime-main.js.map": "/makecard/static/js/runtime-main.18e3d2c6.js.map",
+    "static/js/2.10c40d51.chunk.js": "/makecard/static/js/2.10c40d51.chunk.js",
+    "static/js/2.10c40d51.chunk.js.map": "/makecard/static/js/2.10c40d51.chunk.js.map",
+    "index.html": "/makecard/index.html",
+    "static/css/main.e742c25f.chunk.css.map": "/makecard/static/css/main.e742c25f.chunk.css.map",
+    "static/js/2.10c40d51.chunk.js.LICENSE.txt": "/makecard/static/js/2.10c40d51.chunk.js.LICENSE.txt",
+    "static/media/Logo2.79b8a6fb.svg": "/makecard/static/media/Logo2.79b8a6fb.svg",
+    "static/media/App.css": "/makecard/static/media/Main.601cc72e.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.18e3d2c6.js",
+    "static/js/2.10c40d51.chunk.js",
+    "static/css/main.e742c25f.chunk.css",
+    "static/js/main.9442c140.chunk.js"
+  ]
+}
