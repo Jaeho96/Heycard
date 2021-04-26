@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Heycard/static/css/main.d55fdf78.chunk.css",
+    "main.js": "/Heycard/static/js/main.fb710863.chunk.js",
+    "main.js.map": "/Heycard/static/js/main.fb710863.chunk.js.map",
+    "runtime-main.js": "/Heycard/static/js/runtime-main.bfa257b7.js",
+    "runtime-main.js.map": "/Heycard/static/js/runtime-main.bfa257b7.js.map",
+    "static/js/2.8257cd87.chunk.js": "/Heycard/static/js/2.8257cd87.chunk.js",
+    "static/js/2.8257cd87.chunk.js.map": "/Heycard/static/js/2.8257cd87.chunk.js.map",
+    "index.html": "/Heycard/index.html",
+    "static/css/main.d55fdf78.chunk.css.map": "/Heycard/static/css/main.d55fdf78.chunk.css.map",
+    "static/js/2.8257cd87.chunk.js.LICENSE.txt": "/Heycard/static/js/2.8257cd87.chunk.js.LICENSE.txt",
+    "static/media/Logo2.79b8a6fb.svg": "/Heycard/static/media/Logo2.79b8a6fb.svg",
+    "static/media/App.css": "/Heycard/static/media/Main.601cc72e.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bfa257b7.js",
+    "static/js/2.8257cd87.chunk.js",
+    "static/css/main.d55fdf78.chunk.css",
+    "static/js/main.fb710863.chunk.js"
+  ]
+}
