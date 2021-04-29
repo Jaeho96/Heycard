@@ -25,6 +25,14 @@ app.get("/api/get", (req, res) => {
   });
 });
 
+app.get("/api/get/title", (req, res) => {
+  const sqlSelecttitle = "SELECT title FROM contents;";
+  db.query(sqlSelecttitle, (err, result) => {
+    // res.send(result);
+    console.log(result);
+  });
+});
+
 app.post("/api/insert", (req, res) => {
   const color = req.body.color;
   const name = req.body.name;
@@ -37,12 +45,10 @@ app.post("/api/insert", (req, res) => {
   const introduce = req.body.introduce;
   const img = req.body.img;
   const token = req.body.token;
-
-  console.log(color);
-  console.log(img);
+  const title = req.body.title;
 
   const sqlInsert =
-    "INSERT INTO contents (color, name, mail, corporate, position, phonenumber, officenumber, address, introduce, img, token) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+    "INSERT INTO contents (color, name, mail, corporate, position, phonenumber, officenumber, address, introduce, img, token, title) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
   db.query(
     sqlInsert,
     [
@@ -57,6 +63,7 @@ app.post("/api/insert", (req, res) => {
       introduce,
       img,
       token,
+      title,
     ],
     (err, result) => {
       console.log(err);

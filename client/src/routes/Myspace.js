@@ -168,11 +168,23 @@ function Myspace({ usertoken }) {
     address: "",
     introduce: "",
     img: "",
+    title: "",
   });
 
   const [modalOpen, setModalOpen] = useState(false);
-  const openModal = () => {
+  const openModal = (e) => {
     setModalOpen(true);
+    const { name } = e.target;
+    domtoimage
+      .toBlob(document.getElementById("outputimg"))
+      .then(function (blob) {
+        let reader = new FileReader(); //캡쳐한 blob을 dataurl로 변환
+        reader.readAsDataURL(blob);
+        reader.onloadend = () => {
+          let base64data = reader.result;
+          setValues({ ...values, [name]: base64data });
+        };
+      });
   };
   const closeModal = () => {
     setModalOpen(false);
@@ -190,34 +202,6 @@ function Myspace({ usertoken }) {
     setValues({ ...values, [name]: value });
   };
 
-  const submit = (e) => {
-    const { name } = e.target;
-    domtoimage
-      .toBlob(document.getElementById("outputimg"))
-      .then(function (blob) {
-        let reader = new FileReader(); //캡쳐한 blob을 dataurl로 변환
-        reader.readAsDataURL(blob);
-        reader.onloadend = () => {
-          let base64data = reader.result;
-          setValues({ ...values, [name]: base64data });
-        };
-      });
-
-    // /api/insert로 json보내기
-    // Axios.post("http://localhost:3001/api/insert", {
-    //   token: values.token,
-    //   color: values.color,
-    //   name: values.name,
-    //   mail: values.mail,
-    //   corporate: values.corporate,
-    //   position: values.position,
-    //   phonenumber: values.phonenumber,
-    //   officenumber: values.officenumber,
-    //   address: values.address,
-    //   introduce: values.introduce,
-    //   img: values.img,
-    // });
-  };
   console.log(values);
 
   return (
@@ -340,15 +324,19 @@ function Myspace({ usertoken }) {
             />
           </Infoinputposition>
           <Infoinputposition>
-            <button id="submitbtn" name="img" onClick={submit}>
-              버튼
+            <button name="img" onClick={openModal}>
+              저장
             </button>
-            <button onClick={openModal}>모달팝업</button>
             {/* header 부분에 텍스트를 입력한다. */}
-            <Modal open={modalOpen} close={closeModal} header="Modal heading">
+            <Modal open={modalOpen} close={closeModal} values={values}>
               {/* Modal.js <main> {props.children} </main>에 내용이 입력된다. */}
-              리액트 함수형 모달 팝업창입니다. 쉽게 만들 수 있어요. 같이
-              만들어봐요!
+              명함 이름을 지어주세요
+              <input
+                name="title"
+                value={values.title}
+                onChange={handleChange}
+                placeholder="명함 이름을 입력하세요"
+              ></input>
             </Modal>
           </Infoinputposition>
         </Infoinputs>
