@@ -13,12 +13,14 @@ function App() {
   const [user, setUser] = useState(null);
   // login({username})의 함수를 통해 Signin.js에서 username을 가져와 setUser을 통해 상태관리
   const authenticated = user != null; // 사용자 로그인 인증
+  const login = ({ username }) => setUser({ username });
+  const logout = () => setUser(null);
 
   const [usertoken, setuserToken] = useState(null); //위와 같은 login으로 token값을 가져옴
   const gettoken = ({ token }) => setuserToken({ token });
 
-  const login = ({ username }) => setUser({ username });
-  const logout = () => setUser(null);
+  const [usermail, setuserMail] = useState(null);
+  const getusermail = ({ logmail }) => setuserMail({ logmail });
 
   return (
     <>
@@ -33,7 +35,9 @@ function App() {
         <Route
           path="/myspace"
           exact={true}
-          render={(props) => <Myspace usertoken={usertoken} {...props} />}
+          render={(props) => (
+            <Myspace usertoken={usertoken} usermail={usermail} {...props} />
+          )}
         />
         {/* MY SPACE(명함만들기) 화면 */}
         <Route path="/myspace/repository" exact={true} component={Repository} />
@@ -45,6 +49,7 @@ function App() {
               authenticated={authenticated}
               login={login}
               gettoken={gettoken}
+              getusermail={getusermail}
               {...props}
             />
           )} // Signin(로그인)을 렌더링할때 authenticated(사용자 로그인 여부)와 login(카카오 로그인 api에서 사용자 닉네임을 받아오기 위한 함수)를 인자로 보내준다.

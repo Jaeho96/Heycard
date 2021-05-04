@@ -35,6 +35,7 @@ app.get("/api/get/title", (req, res) => {
 
 app.post("/api/insert", (req, res) => {
   const color = req.body.color;
+  const logmail = req.body.logmail;
   const name = req.body.name;
   const mail = req.body.mail;
   const corporate = req.body.corporate;
@@ -48,11 +49,12 @@ app.post("/api/insert", (req, res) => {
   const title = req.body.title;
 
   const sqlInsert =
-    "INSERT INTO contents (color, name, mail, corporate, position, phonenumber, officenumber, address, introduce, img, token, title) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+    "INSERT INTO contents (color, name, mail, logmail ,corporate, position, phonenumber, officenumber, address, introduce, img, token, title) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
   db.query(
     sqlInsert,
     [
       color,
+      logmail,
       name,
       mail,
       corporate,
