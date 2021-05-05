@@ -39,7 +39,6 @@ const Togglebox = styled.div`
 `;
 
 function Card({
-  key,
   address,
   color,
   corporate,
@@ -63,7 +62,25 @@ function Card({
     <Cardposition>
       <Img src={img} width="250px" height="350px" />
       <div className="card_data">
-        <Cardtitle className="card_title">{title}</Cardtitle>
+        <Cardtitle className="card_title">
+          {title}
+          <svg
+            width="25"
+            height="25"
+            viewBox="0 0 25 25"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M2.93056 16.1114L1.61111 21.8058C1.5656 22.014 1.56716 22.2297 1.61568 22.4372C1.6642 22.6447 1.75846 22.8387 1.89157 23.0051C2.02468 23.1715 2.19328 23.306 2.38506 23.3989C2.57683 23.4918 2.78692 23.5407 3 23.5419C3.09929 23.552 3.19933 23.552 3.29861 23.5419L9.02778 22.2225L20.0278 11.2642L13.8889 5.13916L2.93056 16.1114Z"
+              fill="#A259FF"
+            />
+            <path
+              d="M23.4861 5.77789L19.3889 1.68067C19.1195 1.41266 18.755 1.26221 18.375 1.26221C17.995 1.26221 17.6305 1.41266 17.3611 1.68067L15.0833 3.95845L21.2153 10.0904L23.493 7.81262C23.6263 7.67864 23.7319 7.5197 23.8037 7.34488C23.8755 7.17006 23.9121 6.9828 23.9115 6.79381C23.9108 6.60483 23.8729 6.41782 23.7999 6.24349C23.727 6.06917 23.6203 5.91095 23.4861 5.77789Z"
+              fill="#A259FF"
+            />
+          </svg>
+        </Cardtitle>
       </div>
       <Togglebtn onClick={onClick}>
         <svg
