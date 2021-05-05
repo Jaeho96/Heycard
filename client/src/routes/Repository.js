@@ -69,19 +69,13 @@ function Repository({ usertoken, usermail }) {
     //query가 변할때 useEffect를 실행해야하는 시점이다.
   }, []);
 
-  console.log(data);
-
-  const filterCard = () => {
-    const filterCards = data.filter((item) => {
-      return item.title.toLowerCase().includes(searchdata);
-    });
-    console.log(filterCards);
-  };
+  const filterCard = data.filter((item) => {
+    return item.title.toLowerCase().includes(searchdata);
+  });
 
   const handleChange = (e) => {
     setSearchdata(e.target.value);
   };
-  console.log(searchdata);
 
   return (
     <MakemainPositioner>
@@ -111,7 +105,7 @@ function Repository({ usertoken, usermail }) {
       </Searchbox>
       <Outputform>
         <Outputlayer>
-          {data.map((item) => (
+          {filterCard.map((item) => (
             <Card
               address={item.adress}
               color={item.color}
