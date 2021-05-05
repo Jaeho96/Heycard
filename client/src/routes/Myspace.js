@@ -101,7 +101,6 @@ const Inputform = styled.div`
   width: 50%;
   height: 100vh;
   margin-top: 1rem;
-  border-style: solid;
 `;
 // 명함 컬러 선택하기
 const Cololselector = styled.div`
