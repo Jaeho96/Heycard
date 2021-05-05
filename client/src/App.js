@@ -40,7 +40,17 @@ function App() {
           )}
         />
         {/* MY SPACE(명함만들기) 화면 */}
-        <Route path="/myspace/repository" exact={true} component={Repository} />
+        <Route
+          path="/myspace/repository"
+          exact={true}
+          render={(props) => (
+            <Repository
+              usertoken={usertoken}
+              usermail={usermail}
+              {...[props]}
+            />
+          )}
+        />
         {/* REPOSITORY(명함보관함) 화면 */}
         <Route
           path="/signin"

@@ -19,6 +19,7 @@ app.use(express.static("uploads")); //정적파일 다루기 위한 설정
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/api/get", (req, res) => {
+  // 보관함에서
   const sqlSelect = "SELECT * FROM contents;";
   db.query(sqlSelect, (err, result) => {
     res.send(result);

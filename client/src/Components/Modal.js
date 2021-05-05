@@ -25,15 +25,15 @@ const Modal = (props) => {
 
   const [data, setData] = useState([]);
 
-  useEffect(() => {
-    //query를 리턴하는 함수를 result에 할당
-    async function get() {
-      const result = await Axios.get("http://localhost:3001/api/get/title");
-      setData(result.data);
-    }
-    get();
-    //query가 변할때 useEffect를 실행해야하는 시점이다.
-  }, []);
+  // useEffect(() => {
+  //   //query를 리턴하는 함수를 result에 할당
+  //   async function get() {
+  //     const result = await Axios.get("http://localhost:3001/api/get/title");
+  //     setData(result.data);
+  //   }
+  //   get();
+  //   //query가 변할때 useEffect를 실행해야하는 시점이다.
+  // }, []);
 
   return (
     //모달이 열릴때 openModal클래스가 생성된다.
