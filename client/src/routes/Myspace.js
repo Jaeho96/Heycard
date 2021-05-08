@@ -353,7 +353,6 @@ function Myspace({ usertoken, usermail }) {
             </Submitbtn>
             {/* header 부분에 텍스트를 입력한다. */}
             <Modal open={modalOpen} close={closeModal} values={values}>
-              {/* Modal.js <main> {props.children} </main>에 내용이 입력된다. */}
               명함 이름을 지어주세요
               <input
                 name="title"
