@@ -62,7 +62,6 @@ function Repository({ usertoken, usermail }) {
     async function get() {
       const result = await axios.get("http://localhost:3001/api/get");
       if (!completed) setData(result.data);
-      console.log(result.data);
     }
     get();
     return () => {
@@ -77,14 +76,6 @@ function Repository({ usertoken, usermail }) {
 
   const handleChange = (e) => {
     setSearchdata(e.target.value);
-  };
-
-  const [modalOpen, setModalOpen] = useState(false);
-  const openModal = (e) => {
-    setModalOpen(true);
-  };
-  const closeModal = () => {
-    setModalOpen(false);
   };
 
   return (
@@ -129,13 +120,8 @@ function Repository({ usertoken, usermail }) {
               phonenumber={item.phonenumber}
               title={item.title}
               token={item.token}
-              openModal={openModal}
             />
           ))}
-          <Modalrepository open={modalOpen} close={closeModal}>
-            {/* Modal.js <main> {props.children} </main>에 내용이 입력된다. */}
-            해당 명함을 정말 삭제하시겠어요?
-          </Modalrepository>
         </Outputlayer>
       </Outputform>
     </MakemainPositioner>
