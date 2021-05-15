@@ -68,7 +68,7 @@ function Repository({ usertoken, usermail }) {
       completed = true;
     };
     //query가 변할때 useEffect를 실행해야하는 시점이다.
-  }, []);
+  }, [data]);
 
   const filterCard = data.filter((item) => {
     return item.title.toLowerCase().includes(searchdata);

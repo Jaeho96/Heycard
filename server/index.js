@@ -18,6 +18,26 @@ app.use(express.json());
 app.use(express.static("uploads")); //정적파일 다루기 위한 설정
 app.use(bodyParser.urlencoded({ extended: true }));
 
+//명함 삭제하기(명함보관함) -> /api/contents/manageCard/delete
+app.post("/delete", (req, res) => {
+  if (!req.secure) {
+    let sql = `DELETE FROM contents WHERE title = ? AND logmail = ?;`;
+    let params = [req.body.title, req.body.logmail];
+    db.query(sql, params, function (err, result) {
+      if (err) {
+        console.log("query is not excuted. delete fail...\n" + err);
+        resultToJson = JSON.stringify("N");
+        console.log(resultToJson);
+        res.send(resultToJson);
+      } else {
+        resultToJson = JSON.stringify("Y");
+        console.log(resultToJson);
+        res.send(resultToJson);
+      }
+    });
+  }
+});
+
 app.get("/api/get", (req, res) => {
   // 보관함에서
   const sqlSelect = "SELECT * FROM contents;";

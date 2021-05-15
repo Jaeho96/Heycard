@@ -8,6 +8,7 @@ import Home from "./routes/Home";
 import Myspace from "./routes/Myspace";
 import Signin from "./routes/Signin";
 import Repository from "./routes/Repository";
+import Readcard from "./routes/Readcard";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -64,6 +65,7 @@ function App() {
             />
           )} // Signin(로그인)을 렌더링할때 authenticated(사용자 로그인 여부)와 login(카카오 로그인 api에서 사용자 닉네임을 받아오기 위한 함수)를 인자로 보내준다.
         />
+        <Route path="/readcard" component={Readcard} /> {/* 명함 읽기전용 */}
       </HashRouter>
     </>
   );

@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useState } from "react";
 import styled from "styled-components";
 import Modalrepository from "./Modalrepository";
+import { Redirect, withRouter } from "react-router-dom";
 
 const Cardposition = styled.div`
   width: 250px;
@@ -58,6 +59,7 @@ function Card({
   phonenumber,
   title,
   token,
+  location,
 }) {
   const [toggleon, setToggleon] = useState(false);
 
@@ -75,19 +77,23 @@ function Card({
 
   const deleteCard = () => {
     // => 명함제목, userEmail, token
-    const result = axios({
-      method: "POST",
-      url: "/api/contents/manageCard/delete",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      data: {
-        token: token,
-        userEmail: logmail,
-        title: title,
-      },
-    });
-    console.log(result); //왜 아무 반응도 없노....
+    async function deletecard() {
+      const result = await axios({
+        method: "POST",
+        url: "http://localhost:3001/delete",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        data: {
+          token: token,
+          logmail: logmail, //userEmail: logmail (준이꺼)
+          title: title,
+        },
+      });
+      setModalOpen(false);
+    }
+    deletecard();
+    alert("성공적으로 삭제했습니다!");
   };
 
   return (

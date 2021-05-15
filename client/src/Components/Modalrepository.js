@@ -3,7 +3,7 @@ import Axios from "axios";
 import "./Modal.css";
 
 const Modalrepository = (props) => {
-  const { open, close, deleteCard } = props;
+  const { open, close, deleteApi } = props;
 
   return (
     //모달이 열릴때 openModal클래스가 생성된다.
@@ -18,7 +18,7 @@ const Modalrepository = (props) => {
           </header>
           <main>{props.children}</main>
           <footer>
-            <button className="close" onClick={deleteCard}>
+            <button className="close" onClick={deleteApi}>
               삭제
             </button>
             {/* 버튼에 삭제하기 api 추가하기 */}
